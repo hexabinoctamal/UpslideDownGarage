@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="modal fade" id="contactForm" tabindex="-1" role="dialog" aria-labelledby="myModal-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModal-label">We value your feedback.</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal" method="post">
+                    <!-- Email prompt -->
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                        <div class="col-lg-10">
+                            <input type="email" required="required" class="form-control" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                    <!--Subject prompt-->
+                    <div class="form-group">
+                        <label for="emailSubject" class="col-lg-2 control-label">Subject</label>
+                        <div class="col-lg-10">
+                            <input type="text" required="required" class="form-control" id="emailSubject" placeholder="Subject">
+                        </div>
+                    </div>
+                    <!--Message-->
+                    <div class="form-group">
+                        <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                        <div class="col-lg-10">
+                            <textarea class="form-control" required="required" rows="3" id="textArea"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Submit</button> <!--change type= to submit for post-->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>{{ title }}.</h2>
+    <h3>{{ message }}</h3>
+    <div class="col-md-4 col-md-offset-4 logoo">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#contactForm">Contact</button>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

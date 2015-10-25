@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div id="my-carousel" class="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#my-carousel" data-slide-to="1"></li>
+                <li data-target="#my-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <a href="{{url_for('parts')}}"><img src="../static/imgs/naItem.png" />
+                    <div class="carousel-caption">
+                        <h5>Parts</h5>
+                    </div></a>
+                </div>
+                <div class="item">
+                    <a href="{{url_for('apparel')}}">
+                        <img src="../static/imgs/shirtf.png" />
+                        <div class="carousel-caption">
+                            <h5>Apparel</h5>
+                        </div></a>
+                </div>
+                <div class="item">
+                    <a href="{{url_for('accessories')}}"><img src="../static/imgs/logof.PNG" />
+                    <div class="carousel-caption">
+                        <h5>Accessories</h5>
+                    </div></a>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#my-carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#my-carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+    {% endblock %}

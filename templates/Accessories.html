@@ -1,0 +1,22 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 store-item-descr">
+            <div>
+                <h2>{{item.name}} {{"${:,.2f}".format(item.price)}}</h2>
+                <h3>{{item.colors}}</h3>
+                <h3>{{item.sizes}}</h3>
+                <h4>{{item.description}}</h4>
+            </div>
+            <button class="btn-small btn-success">Add to Cart</button>
+        </div>
+        <div class="col-md-6 store-item-descr">
+            <div>
+                <img class="store-img" src="../static/imgs/logof.PNG" />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

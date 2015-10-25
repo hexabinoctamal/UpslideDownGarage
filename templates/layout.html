@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}-Upslidedown</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <link rel="stylesheet" type="text/css" href="{{ pageSheet }}">
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="{{ url_for('shop') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Shop<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ url_for('parts') }}">Parts</a></li>
+                            <li><a href="{{ url_for('apparel') }}">Aparel</a></li>
+                            <li><a href="{{ url_for('accessories') }}">Accessories</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{url_for('shop')}}">Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <div class="logoo">
+            <a href="/"><img src="../static/imgs/logo.png" /></a>
+        </div>
+        {% block content %}{% endblock %}
+        <hr />
+        <footer>
+            <p>&copy; {{ year }} - Upslidedown Garage</p>
+        </footer>
+    </div>
+
+
+    <script src="../static/scripts/jquery-2.1.4.min.js"></script>
+    <script src="../static/scripts/bootstrap.min.js"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

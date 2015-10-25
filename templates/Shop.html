@@ -1,0 +1,11 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<ul>
+    <li><a href="{{ url_for('parts') }}">Parts</a></li>
+    <li><a href="{{ url_for('apparel') }}">Aparel</a></li>
+    <li><a href="{{ url_for('accessories') }}">Accessories</a></li>
+</ul>
+
+{% endblock %}
